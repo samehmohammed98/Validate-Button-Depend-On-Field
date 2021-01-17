@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Vue Calculate Product</title>
+</head>
+<body>
+  <div id="vue-test" class="container">
+    <form action="">
+      <input type="text" placeholder="Type Your Name" v-model='name'>
+      <input type="text" placeholder="Type Your Email" v-model='email'>
+      <input type="text" placeholder="Type Your Phone" v-model='phone'>
+      <button :disabled = '!name || !email || !phone'>Send Data</button>
+    </form>
+  </div>
+
+  <script src="js/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#vue-test',
+      data: {
+        name: null,
+        email: null,
+        phone: null
+      }
+    });
+  </script>
+</body>
+</html>
